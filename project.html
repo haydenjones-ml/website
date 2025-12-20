@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Hayden Jones</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
+    <style>
+        /* Custom branding colors */
+        a { color: #f577b4; }
+        a:hover { color: rgb(255, 164, 213); }
+        
+        .accent { color: #f577b4; }
+        .back-link { text-decoration: none; font-size: 0.9rem; }
+        
+        /* Project Layout */
+        .project-detail {
+            border-left: 3px solid #f577b4;
+            padding-left: 20px;
+            margin-bottom: 40px;
+        }
+
+        /* The Flexbox Container */
+        h2 {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 10px; /* Prevents text from touching */
+        }
+
+        .date {
+            font-size: 0.8rem;
+            color: #888;
+            font-weight: normal;
+            white-space: nowrap; /* Keeps date on one line */
+        }
+
+        .tag {
+            background: #f577b422;
+            color: #f577b4;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 600px) {
+            h2 {
+                flex-direction: column; /* Stacks title and date */
+                align-items: flex-start;
+            }
+            .date {
+                font-size: 0.7rem;
+                margin-top: -10px; /* Pulls date closer to title */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="back-link">← Back to Home</a>
+        <h1>Technical <span class="accent">Projects</span></h1>
+        <p>My software and hardware projects throughout the years.</p>
+    </header>
+
+    <main>
+        <h1>Hardware</h1>
+        <section class="project-detail">
+            <h2>
+                RFID Door System 
+                <span class="date">Completed July 2021</span>
+            </h2>
+            <div>
+                <span class="tag">Embedded C</span>
+                <span class="tag">ESP32</span>
+                <span class="tag">IoT</span>
+            </div>
+            
+            <h3>Overview</h3>
+            <p>Developed a secure access control system using the ESP-IDF framework. The project focused on real-time response and reliable sensor interfacing.</p>
+            
+            <h3>Technical Challenges</h3>
+            <ul>
+                <li><strong>I2C Driver Development:</strong> Wrote custom drivers to interface with the BME280 for environmental monitoring alongside the RFID reader.</li>
+                <li><strong>Concurrency:</strong> Managed FreeRTOS tasks to ensure the door strike remained responsive while logging data to the cloud.</li>
+            </ul>
+
+            <p>
+                <a href="https://www.linkedin.com/feed/update/urn:li:activity:6875634291909509120/" target="_blank">Watch Demo (Linkedin)</a>
+            </p>
+        </section>
+
+        <h1>Software</h1>
+        <section class="project-detail">
+            <h2>
+                NFL Yardage Classifier
+                <span class="date">Last updated - October 2025</span>
+            </h2>
+            <div>
+                <span class="tag">Python</span>
+                <span class="tag">XGBoost</span>
+                <span class="tag">Data Science</span>
+            </div>
+
+            <h3>Overview</h3>
+            <p>A binary classification model built to predict player performance. This project involved extensive data scraping, cleaning, and feature engineering.</p>
+            
+            <h3>Process</h3>
+            <ul>
+                <li>Utilized <strong>Pandas</strong> to perform exploratory data analysis on available features; construct dataframe with engineered features</li>
+                <li>Implemented and tuned <strong>XGBoost</strong> classifier for an efficient and accurate decision forest</li>
+                <li>Engineered custom features based on hypothetical metrics to boost accuracy from a baseline 61% to <strong>over 68%</strong> during 113 game sampling window.</li>
+            </ul>
+            <h3>Challenges</h3>
+            <ul>
+                <li><strong>Feature Creep:</strong> Had to limit the amount of feature engineering done to ensure performance-training time tradeoff was sound.</li>
+                <li><strong>Data Integration:</strong>Migrating from manually uploading CSV files to utilizing libraries with similar data was difficult, but rewarding to learn.</li>
+            </ul>
+            
+            
+
+            <p><a href="https://github.com/haydenjones-ml/NFL-Classifier" target="_blank">View Code (Github)</a></p>
+        </section>
+        <section class="project-detail">
+            <h2>
+                SeedScraper - Data scraper for Start.gg
+                <span class="date">Last updated - October 2025</span>
+            </h2>  
+            <div>
+                <span class="tag">Python</span>
+                <span class="tag">GraphQL</span>
+            </div>
+            <h3>Overview</h3>
+            <p>Given a tournament with public seeding data, SeedScraper will retrieve the top N seeds (where N is a specified number). This list is then available immediately with an option to export to a CSV</p>
+            <h3>Process</h3>
+        </section>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>Hayden Jones | <a href="https://www.linkedin.com/in/haydenjones-cmpe/">LinkedIn</a></p>
+    </footer>
+</body>
+</html>

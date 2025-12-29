@@ -25,7 +25,7 @@
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            gap: 10px; /* Prevents text from touching */
+            gap: 10px;
         }
 
         .date {
@@ -45,15 +45,15 @@
             margin-right: 5px;
         }
 
-        /* Mobile Responsiveness */
+        /* Mobile Responsiveness; stacks title and date when mobile is detected */
         @media (max-width: 600px) {
             h2 {
-                flex-direction: column; /* Stacks title and date */
+                flex-direction: column;
                 align-items: flex-start;
             }
             .date {
                 font-size: 0.7rem;
-                margin-top: -10px; /* Pulls date closer to title */
+                margin-top: -10px;
             }
         }
     </style>

@@ -136,6 +136,19 @@
             <span class="tag">SDL</span> 
         </div>
         <h3>Overview</h3>
+        <p>An application written using C and SDL to let multiple people draw on the same canvas over an internet connection. 
+            Created to exercise principles learned in <a href="https://beej.us/guide/bgnet/" target="_blank">Beej's Guide to Network Programming</a>.</p>
+        <h3>Process</h3>
+        <ul>
+            <li>Set up basic window and graphics rendering using the <strong>SDL2</strong> library.</li>
+            <li>Implemented networking code to allow multiple clients to connect to a designated "host" and share drawing data in real-time.</li>
+            <li>Designed a selection system (key shortcuts + TUI) for selecting colors and brush sizes.</li>
+        </ul>
+        <h3>Challenges</h3>
+        <ul>
+            <li><strong>Packet Architecture:</strong> Designing the network packets to ensure all necessary information is sent/received while maintaining speed and reliability</li>
+            <li><strong>Multi-Platform Support:</strong> Currently using the Windows implementation of the sockets API; need to add adjustments for Linux library as well</li>
+        </ul>
         </section>
         <section class="project-detail">
             <h2>

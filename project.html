@@ -68,6 +68,32 @@
     <main>
         <h1>Hardware</h1>
         <section class="project-detail">
+            <h2>
+                Hayplayer - Custom MP3/FLAC Player
+            </h2>
+            <div>
+                <span class="tag">Kicad</span>
+                <span class="tag">STM32</span> 
+                <span class="tag">VLSI</span>
+                <span class="tag">C</span>
+            </div>
+            <h3>Overview</h3>
+            <p>Designing a fully custom, portable MP3 and FLAC audio player from the ground up: going from concept drawings to a full-fledged electronic product. This project focuses on electronics architecture, combining a microcontroller with a dedicated hardware audio decoder for high-fidelity playback.</p>
+            <h3>Process</h3>
+            <ul>
+                <li>Engineered a custom power management and distribution circuit to handle USB charging and battery switching seamlessly.</li>
+                <li>Integrated a <strong>VLSI VS1063</strong> audio decoder, managing the communication interface and routing between the <strong>STM32</strong> and the dedicated audio hardware.</li>
+                <li>Designed and iterated on the PCB design and schematic in <strong>Kicad</strong> with a strong focus on separating digital control signals from sensitive audio lines to maintain signal integrity.</li>
+                <li>CURRENTLY: Waiting on PCB fabrication and components, afterwards proceeding with firmware development in <strong>C</strong> and iterating circuitry for consumer-grade reliability.</li>
+            </ul>
+            <h3>Challenges</h3>
+            <ul>
+                <li><strong>Mixed-Signal Architecture:</strong> Going from a straightforward design like the Keypad project to this meant keeping signal and power principles in mind at all times.</li>
+                <li><strong>Advanced Power Management:</strong> Moving beyond basic power delivery to implement robust load-sharing logic. Refining the diode circuitry was critical to ensure the system could safely and continuously transition between internal battery power and USB-C charging without voltage drops.</li>
+                <li><strong>Firmware Memory Constraints:</strong> Low-power hardware means razor-thin margins of memory to work within, requiring efficient code optimization and resource management to maintain functionality.</li>
+            </ul>
+        </section>
+        <section class="project-detail">
                 <h2>
                 Keypad with Volume Control
                 <span class="date">December 2025 - March 2025 </span>
